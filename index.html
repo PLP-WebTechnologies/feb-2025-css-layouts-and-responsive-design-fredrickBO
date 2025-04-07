@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">MyWebsite</div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <h1>Welcome to Our Responsive Site</h1>
+                <p>Using Flexbox & Grid for Modern Layouts</p>
+                <a href="#features" class="cta-button">Learn More</a>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Awesome Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="https://via.placeholder.com/80" alt="Feature Icon 1">
+                        <h3>Feature One</h3>
+                        <p>Description of the first amazing feature goes here.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://via.placeholder.com/80" alt="Feature Icon 2">
+                        <h3>Feature Two</h3>
+                        <p>Details about the second compelling feature we offer.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://via.placeholder.com/80" alt="Feature Icon 3">
+                        <h3>Feature Three</h3>
+                        <p>Information on the third valuable feature provided.</p>
+                    </div>
+                     <div class="feature-item">
+                        <img src="https://via.placeholder.com/80" alt="Feature Icon 4">
+                        <h3>Feature Four</h3>
+                        <p>More about the fourth great feature available.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container about-content">
+                 <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>We are passionate about creating modern, responsive web experiences using the latest technologies like Flexbox and CSS Grid.</p>
+                    <p>Our goal is to build websites that look great and function perfectly on any device.</p>
+                 </div>
+                 <div class="about-image">
+                     <img src="https://via.placeholder.com/400x300" alt="About Us Image">
+                 </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+             <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch via the form below.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2023 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
